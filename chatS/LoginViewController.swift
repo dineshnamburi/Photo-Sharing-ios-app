@@ -26,11 +26,21 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 18
         
         
+       
+        
+        
+        
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillLayoutSubviews() {
         let border = CALayer()
         let width = CGFloat(1.0)
         border.borderColor = UIColor.lightGray.cgColor
         border.frame = CGRect(x: 0, y: emailText.frame.size.height - width, width:  emailText.frame.size.width, height: emailText.frame.size.height)
-        
+        //print(border.frame.width)
+        //print(emailText.frame.size.width)
         border.borderWidth = width
         emailText.layer.addSublayer(border)
         emailText.layer.masksToBounds = true
@@ -45,8 +55,6 @@ class LoginViewController: UIViewController {
         passwordText.layer.addSublayer(border1)
         passwordText.layer.masksToBounds = true
         
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

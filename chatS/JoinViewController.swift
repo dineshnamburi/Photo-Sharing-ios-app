@@ -16,6 +16,7 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var passText: UITextField!
     @IBOutlet weak var confirmpassText: UITextField!
     @IBOutlet weak var createButton: UIButton!
+
     
     
     
@@ -23,6 +24,16 @@ class JoinViewController: UIViewController {
         super.viewDidLoad()
 
         
+        
+        
+        createButton.layer.borderColor = UIColor(red:0.95, green:0.41, blue:0.38, alpha:1.0).cgColor
+        createButton.layer.borderWidth = 1
+        createButton.layer.cornerRadius = 18
+        joinButton.layer.cornerRadius = 18
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillLayoutSubviews(){
         let border1 = CALayer()
         let width1 = CGFloat(1.0)
         border1.borderColor = UIColor.lightGray.cgColor
@@ -44,7 +55,7 @@ class JoinViewController: UIViewController {
         let border2 = CALayer()
         let width2 = CGFloat(1.0)
         border2.borderColor = UIColor.lightGray.cgColor
-        border2.frame = CGRect(x: 0, y: passText.frame.size.height - width2, width:  passText.frame.size.width, height: emailText.frame.size.height)
+        border2.frame = CGRect(x: 0, y: passText.frame.size.height - width2, width:  passText.frame.size.width, height: passText.frame.size.height)
         
         border2.borderWidth = width2
         passText.layer.addSublayer(border2)
@@ -58,12 +69,6 @@ class JoinViewController: UIViewController {
         border3.borderWidth = width3
         confirmpassText.layer.addSublayer(border3)
         confirmpassText.layer.masksToBounds = true
-        
-        createButton.layer.borderColor = UIColor(red:0.95, green:0.41, blue:0.38, alpha:1.0).cgColor
-        createButton.layer.borderWidth = 1
-        createButton.layer.cornerRadius = 18
-        joinButton.layer.cornerRadius = 18
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
