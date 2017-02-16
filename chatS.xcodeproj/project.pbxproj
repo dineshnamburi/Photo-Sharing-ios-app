@@ -390,6 +390,7 @@
 				58D85D0B1E4FCFF200701A3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
